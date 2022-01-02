@@ -191,7 +191,7 @@ switch ( $step ) {
 		printf(
 			/* translators: %s: Documentation URL. */
 			__( 'Need more help? <a href="%s">We got it</a>.' ),
-			__( 'http://wordpress.org/support/article/editing-wp-config-php/' )
+			__( 'https://wordpress.org/support/article/editing-wp-config-php/' )
 		);
 		?>
 </p>
@@ -336,7 +336,7 @@ switch ( $step ) {
 			$no_api = isset( $_POST['noapi'] );
 
 			if ( ! $no_api ) {
-				$secret_keys = wp_remote_get( 'http://api.wordpress.org/secret-key/1.1/salt/' );
+				$secret_keys = wp_remote_get( 'https://api.wordpress.org/secret-key/1.1/salt/' );
 			}
 
 			if ( $no_api || is_wp_error( $secret_keys ) ) {
@@ -456,7 +456,7 @@ if ( ! /iPad|iPod|iPhone/.test( navigator.userAgent ) ) {
 						/* translators: 1: wp-config.php, 2: Documentation URL. */
 						__( 'You need to make the file %1$s writable before you can save your changes. See <a href="%2$s">Changing File Permissions</a> for more information.' ),
 						'<code>wp-config.php</code>',
-						__( 'http://wordpress.org/support/article/changing-file-permissions/' )
+						__( 'https://wordpress.org/support/article/changing-file-permissions/' )
 					);
 				} else {
 					$error_message = sprintf(
